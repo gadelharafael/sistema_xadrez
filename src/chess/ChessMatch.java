@@ -30,7 +30,7 @@ public class ChessMatch {
 
 	private void initialSetup() {
 		
-		/*novolugarDaPecaTabuleiroXadrez('c', 1, new Rook(board, Color.WHITE));
+		novolugarDaPecaTabuleiroXadrez('c', 1, new Rook(board, Color.WHITE));
 		novolugarDaPecaTabuleiroXadrez('c', 2, new Rook(board, Color.WHITE));
 		novolugarDaPecaTabuleiroXadrez('d', 2, new Rook(board, Color.WHITE));
 		novolugarDaPecaTabuleiroXadrez('e', 2, new Rook(board, Color.WHITE));
@@ -45,10 +45,6 @@ public class ChessMatch {
 		novolugarDaPecaTabuleiroXadrez('d', 8, new King(board, Color.BLACK));
 		
 		
-		
-		*/
-
-
 	
 	
 	}

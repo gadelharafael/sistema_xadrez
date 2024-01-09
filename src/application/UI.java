@@ -38,13 +38,6 @@ public class UI {
 	}
 
 	private static void printPiece(ChessPiece piece) {
-		if (piece == null) {
-			System.out.print("-");
-		}
-		else {
-			System.out.print(piece);
-		}
-		System.out.print(" ");
     	if (piece == null) {
             System.out.print("-");
         }
@@ -56,5 +49,6 @@ public class UI {
                 System.out.print(ANSI_YELLOW + piece + ANSI_RESET);
             }
         }
+        System.out.print(" ");
 	}
 }
