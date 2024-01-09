@@ -30,18 +30,26 @@ public class ChessMatch {
 
 	private void initialSetup() {
 		
-		novolugarDaPecaTabuleiroXadrez('c', 1, new Rook(board, Color.WHITE));
+		/*novolugarDaPecaTabuleiroXadrez('c', 1, new Rook(board, Color.WHITE));
 		novolugarDaPecaTabuleiroXadrez('c', 2, new Rook(board, Color.WHITE));
 		novolugarDaPecaTabuleiroXadrez('d', 2, new Rook(board, Color.WHITE));
 		novolugarDaPecaTabuleiroXadrez('e', 2, new Rook(board, Color.WHITE));
 		novolugarDaPecaTabuleiroXadrez('e', 1, new Rook(board, Color.WHITE));
 		novolugarDaPecaTabuleiroXadrez('d', 1, new King(board, Color.WHITE));
+		
 		novolugarDaPecaTabuleiroXadrez('c', 7, new Rook(board, Color.BLACK));
 		novolugarDaPecaTabuleiroXadrez('c', 8, new Rook(board, Color.BLACK));
 		novolugarDaPecaTabuleiroXadrez('d', 7, new Rook(board, Color.BLACK));
 		novolugarDaPecaTabuleiroXadrez('e', 7, new Rook(board, Color.BLACK));
 		novolugarDaPecaTabuleiroXadrez('e', 8, new Rook(board, Color.BLACK));
 		novolugarDaPecaTabuleiroXadrez('d', 8, new King(board, Color.BLACK));
+		
+		
+		
+		*/
 
+
+	
+	
 	}
 }
