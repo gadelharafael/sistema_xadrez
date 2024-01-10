@@ -43,7 +43,7 @@ public class ChessMatch {
 	}
 	private void validacaoPosicaoOrigem(Position position) {
 		if(!board.temPecaNestaPosicao(position)) {
-			throw new ChessException("Não existe peça na posição de origem");
+			throw new ChessException("Nao existe peca na posicao de origem");
 		}
 	}
 

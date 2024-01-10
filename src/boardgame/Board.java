@@ -28,21 +28,21 @@ public class Board {
 		
 	public Piece piece(int row, int column) {
 		if(!essaPosicaoExiste(row,column)) {
-			throw new BoardException("Esta posição não existe no tabuleiro");
+			throw new BoardException("Esta posicao nao existe no tabuleiro");
 		}
 		return pieces[row][column];
 	} 
 	
 	public Piece piece(Position position) {
 		if(!essaPosicaoExiste(position)) {
-			throw new BoardException("Esta posição não existe no tabuleiro");
+			throw new BoardException("Esta posicao nao existe no tabuleiro");
 		}
 		return pieces[position.getRow()][position.getColumn()];
 	}
 	
 	public void colocarPieceNumaPosicao(Piece piece, Position position) {
 		if(temPecaNestaPosicao(position)) {
-			throw new BoardException("Já existe uma peça nesta posição " +position);
+			throw new BoardException("Ja existe uma peca nesta posicao " +position);
 		}
 		this.pieces[position.getRow()][position.getColumn()] = piece;
 		piece.position = position;
@@ -50,7 +50,7 @@ public class Board {
 	
 	public Piece removerPieceNumaPosicao(Position position) {
 		if(!essaPosicaoExiste(position)) {
-			throw new BoardException("Esta posição não existe no tabuleiro");
+			throw new BoardException("Esta posicao nao existe no tabuleiro");
 		}
 		if(piece(position) == null) {
 			return null;
@@ -73,7 +73,7 @@ public class Board {
 	
 	public boolean temPecaNestaPosicao(Position position) {
 		if(!essaPosicaoExiste(position)) {
-			throw new BoardException("Esta posição não existe no tabuleiro");
+			throw new BoardException("Esta posicao nao existe no tabuleiro");
 		}
 		return piece(position) != null;
 		
