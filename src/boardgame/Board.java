@@ -48,6 +48,19 @@ public class Board {
 		piece.position = position;
 	}
 	
+	public Piece removerPieceNumaPosicao(Position position) {
+		if(!essaPosicaoExiste(position)) {
+			throw new BoardException("Esta posição não existe no tabuleiro");
+		}
+		if(piece(position) == null) {
+			return null;
+		}
+		Piece aux = piece(position);
+		aux.position = null;
+		this.pieces[position.getRow()][position.getColumn()] = null;
+		return aux;
+	}
+	 
 	private boolean essaPosicaoExiste(int row, int column) {
 		return row >= 0 && row < this.rows && column >=0 && column < this.columns;
 		
