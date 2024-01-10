@@ -45,6 +45,9 @@ public class ChessMatch {
 		if(!board.temPecaNestaPosicao(position)) {
 			throw new ChessException("Nao existe peca na posicao de origem");
 		}
+		if(!board.piece(position).existeMovimentoPossivelParaPeca()) {
+			throw new ChessException("Nao existe movimentos possiveis para esta peca");
+		}
 	}
 
 	public void novolugarDaPecaTabuleiroXadrez(char column, int row, ChessPiece chessPiece) {
