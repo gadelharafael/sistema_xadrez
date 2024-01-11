@@ -2,6 +2,7 @@ package chess;
 
 import boardgame.Board;
 import boardgame.Piece;
+import boardgame.Position;
 
 public abstract class ChessPiece extends Piece{
 
@@ -17,6 +18,9 @@ public abstract class ChessPiece extends Piece{
 		return color;
 	}
 
-	
+	protected boolean temPecaAdversariaNestaPosicao(Position position) {
+		ChessPiece p = (ChessPiece)getBoard().piece(position);
+		return p != null && p.getColor() != this.color;
+	}
 	
 }

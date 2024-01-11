@@ -29,6 +29,7 @@ public class ChessMatch {
 		Position origem = posicaoOrigem.conversaoMatrizXADREZemMatrizNORMAL();
 		Position destino = posicaoDestino.conversaoMatrizXADREZemMatrizNORMAL();
 		validacaoPosicaoOrigem(origem);
+		validacaoPosicaoDestino(origem, destino);
 		Piece pecaCapturada = movimentarPeca(origem,destino);
 		return (ChessPiece) pecaCapturada;
 		
@@ -41,6 +42,7 @@ public class ChessMatch {
 		return pecaCapiturada;
 		
 	}
+	
 	private void validacaoPosicaoOrigem(Position position) {
 		if(!board.temPecaNestaPosicao(position)) {
 			throw new ChessException("Nao existe peca na posicao de origem");
@@ -49,6 +51,13 @@ public class ChessMatch {
 			throw new ChessException("Nao existe movimentos possiveis para esta peca");
 		}
 	}
+	
+	private void validacaoPosicaoDestino(Position posicaoOrigem, Position posicaoDestino) {
+		if(!board.piece(posicaoOrigem).possibilidadeMoverPeca(posicaoDestino)) {
+			throw new ChessException("A peca escolhida nao pode ser movimentada para a posicao de destino selecionada");
+		}
+	}
+
 
 	public void novolugarDaPecaTabuleiroXadrez(char column, int row, ChessPiece chessPiece) {
 		board.colocarPieceNumaPosicao(chessPiece, new ChessPosition(column, row).conversaoMatrizXADREZemMatrizNORMAL());
